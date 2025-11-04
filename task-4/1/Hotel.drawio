@@ -1,0 +1,213 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0" version="28.2.8">
+  <diagram name="Страница — 1" id="9YTnFQR7vdJ1ygILpzJY">
+    <mxGraphModel dx="1699" dy="1971" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Hotel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- rooms: RoomCollection&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- services:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;Services&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;- clients:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Clients&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Hotel():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Hotel&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ GetRooms():&amp;nbsp;&lt;/span&gt;RoomCollection&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ GetRoom(number: int) : Room&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ GetServices():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;Services&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;+ GetClients():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Clients&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ AddRoom(room: Room)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ AddService(service: Service)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ AddClient(client: Client)&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="267" y="-50" width="222" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Room&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- number: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- capacity: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- stars: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- evictionDate: Date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- status: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- client: Client&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- lastClients: ClientsCollection&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Room(number: int):&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Room(number: int, capacity: int):&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;Room&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Room(number: int,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;capacity: int, stars: int&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;):&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ GetNumber(): int&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetCapacity(): int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetStars(): int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetEvictionDate(): Date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ GetStatus(): string&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetClient(): Client&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetLastClients():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ClientsCollection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ ChangeStatus(status: string, evictionDate: Date)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Populate(client: Client)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Evict()&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-53" y="498" width="292" height="386" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- title: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- type: string&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Service(title: string): Service&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Service(title: string, price: float): Service&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetType(): string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="519" y="498" width="232" height="133" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- fullname: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- room: Room&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Client(fullname: string): Client&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetFullname(): string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetRoom(): Room&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ChangeRoom(room: Room)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="285" y="498" width="186" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Abstract&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;PurchasableObject&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- price: float&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetPrice(): float&lt;br&gt;+ SetPrice(price: float): boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="465" y="943" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-7" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="XmIYSpj5h0tuOAGyWuCb-2" target="XmIYSpj5h0tuOAGyWuCb-6" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="334" y="380" as="sourcePoint" />
+            <mxPoint x="494" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="513" y="791" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-8" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="XmIYSpj5h0tuOAGyWuCb-3" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="440" y="390" as="sourcePoint" />
+            <mxPoint x="635" y="939" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-16" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="307" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="XmIYSpj5h0tuOAGyWuCb-17" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="339" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Abstract&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;BaseCollection&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- elements: T[]&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Get(): T[]&lt;br&gt;+ Show()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="49" y="98" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RoomsCollection&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ EmptyRooms(): RoomCollection&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;+ SortByPrice():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;RoomCollection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ SortByCapasity():&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;RoomCollection&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ SortByStars():&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;RoomCollection&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="332" width="199" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ClientsCollection&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SortByName(): Clients&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ SortByEvictionDate():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Clients&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="267" y="332" width="224" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Services&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SortByPrice(): Services&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ SortByType():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Services&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="519" y="332" width="224" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IInspectable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Inspect()&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="178" y="943" width="190" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-7" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-4" target="XmIYSpj5h0tuOAGyWuCb-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="511" y="787" as="sourcePoint" />
+            <mxPoint x="785" y="942" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="378" y="719" />
+              <mxPoint x="560" y="722" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-8" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.882;exitY=1.009;exitDx=0;exitDy=0;entryX=0.133;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-2" target="_9Vr4ptQ3Q7-oAEOSIkB-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="315" y="785" as="sourcePoint" />
+            <mxPoint x="589" y="940" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-9" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.156;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.711;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-4" target="_9Vr4ptQ3Q7-oAEOSIkB-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="321.48199999999974" y="641.0000000000002" as="sourcePoint" />
+            <mxPoint x="313" y="914.7" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-10" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.864;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-3" target="_9Vr4ptQ3Q7-oAEOSIkB-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="344" y="889" as="sourcePoint" />
+            <mxPoint x="343" y="1163" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="577" y="756" />
+              <mxPoint x="345" y="753" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-12" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.221;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-2" target="_9Vr4ptQ3Q7-oAEOSIkB-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="214" y="264" as="sourcePoint" />
+            <mxPoint x="212" y="321" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-13" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.104;exitY=0.01;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-3" target="_9Vr4ptQ3Q7-oAEOSIkB-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="212" y="273" as="sourcePoint" />
+            <mxPoint x="210" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="282" />
+              <mxPoint x="192" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-14" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.874;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-5" target="_9Vr4ptQ3Q7-oAEOSIkB-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="392" y="240" as="sourcePoint" />
+            <mxPoint x="390" y="297" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="631" y="255" />
+              <mxPoint x="215" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-15" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-3" target="XmIYSpj5h0tuOAGyWuCb-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="302" y="368" as="sourcePoint" />
+            <mxPoint x="462" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-16" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-5" target="XmIYSpj5h0tuOAGyWuCb-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="376" y="352" as="sourcePoint" />
+            <mxPoint x="375" y="228" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="575" y="297" />
+              <mxPoint x="434" y="297" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-17" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_9Vr4ptQ3Q7-oAEOSIkB-2" target="XmIYSpj5h0tuOAGyWuCb-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="174" y="325" as="sourcePoint" />
+            <mxPoint x="442" y="291" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="189" y="297" />
+              <mxPoint x="323" y="297" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-19" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="_9Vr4ptQ3Q7-oAEOSIkB-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="90" y="496" as="sourcePoint" />
+            <mxPoint x="179" y="463" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-20" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-4" target="_9Vr4ptQ3Q7-oAEOSIkB-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="375" y="494" as="sourcePoint" />
+            <mxPoint x="375" y="440" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-21" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.478;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-3" target="_9Vr4ptQ3Q7-oAEOSIkB-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="617" y="515" as="sourcePoint" />
+            <mxPoint x="617" y="461" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-22" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="452" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-23" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="339" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-24" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="395" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-25" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="393" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-26" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="587" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-27" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="201" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-28" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="112" y="452" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-29" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="401" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-30" value="1..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="652" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-31" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="641" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-32" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="393" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-33" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="481" as="geometry">
+            <mxPoint x="3" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9Vr4ptQ3Q7-oAEOSIkB-34" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.005;entryY=0.565;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XmIYSpj5h0tuOAGyWuCb-2" target="XmIYSpj5h0tuOAGyWuCb-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="239" y="644" as="sourcePoint" />
+            <mxPoint x="399" y="644" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
