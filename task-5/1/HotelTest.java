@@ -7,6 +7,17 @@ import java.time.LocalDate;
 
 public class HotelTest {
     public static void main(String[] args) {
+        try {
+            testHotel();
+            loadData();
+            showUI();
+        } catch (Exception e) {
+            System.err.printf("Catch error on top level: %s\n", e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    private static void testHotel() { 
         HotelService hotelService = HotelService.get();
         System.out.println("Hotel Created");
 
@@ -77,7 +88,29 @@ public class HotelTest {
         allClients.sortByName().show();
         System.out.println("Rooms in Hotel By EvictionDate:");
         allClients.sortByEvictionDate().show();
+    }
 
-        Router.toHotels();
+    private static void loadData() {
+        HotelService.get().getServiceService().loadServices();
+        HotelService.get().getClientService().loadClients();
+        HotelService.get().getRoomService().loadRooms();
+    }
+
+    private static void showUI() {
+        while (true) {
+            try {
+                Router.toHotels();
+                break;
+            }
+            catch (StackOverflowError e) {
+                System.err.println("Stack Overflow in showUI");
+                e.printStackTrace();
+                break;
+            } 
+            catch (Exception e) {
+                System.err.printf("Catch error on showUI: %s\n", e.toString());
+                e.printStackTrace();
+            }    
+        }
     }
 }

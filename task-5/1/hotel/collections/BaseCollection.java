@@ -14,11 +14,18 @@ public abstract class BaseCollection<T extends IInspectable, C extends BaseColle
 
     protected Stream<T> getStream() { return this.elements.stream(); }
 
-    protected void each(Consumer<? super T> a) { this.getStream().forEach(a); }
+    public void each(Consumer<? super T> a) { this.getStream().forEach(a); }
 
     protected C filter(Predicate<? super T> f) {
         List<T> list = this.getStream().filter(f).collect(Collectors.toList());
         return New(list);
+    }
+
+    protected T find(Predicate<? super T> f) {
+        T found;
+        try { found = this.getStream().filter(f).findFirst().get(); }
+        catch (Exception e) { found = null; }
+        return found;
     }
 
     protected C sort(Comparator<? super T> s) {

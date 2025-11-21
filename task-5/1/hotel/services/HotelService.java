@@ -3,8 +3,11 @@ package hotel.services;
 import hotel.models.Hotel;
 
 public class HotelService {
-    private final static HotelService singleton = new HotelService();
-    public static HotelService get() { return singleton; }
+    private static HotelService singleton;
+    public static HotelService get() {
+        if (singleton == null) { singleton = new HotelService(); }
+        return singleton;
+    }
 
     private final Hotel hotel = new Hotel();
 

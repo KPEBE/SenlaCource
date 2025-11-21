@@ -14,17 +14,17 @@ public class ServiceView extends View {
         gap();
         print("1. Add New Service");
         gap();
-        int index = 2;
-        for ( Service service : services ) {
-            print(String.format("%d. %s", index, service.toString()));
-            addAction(index, ()->{ Router.toShowService(service.getTitle()); });
-            index++;
-        }
+        print("2. Save Services");
+        print("3. Load Services");
+        gap();
+        printServices(services);
         gap();
         print("0. Back");
         gap();
 
         addAction(1, ()->{ Router.toCreateService(inputTitle(), inpuServiceType(), inputPrice()); });
+        addAction(2, ()->{ Router.toSaveServices(); });
+        addAction(3, ()->{ Router.toLoadServices(); });
         addAction(0, ()->{ Router.toHotels(); });
 
         runAction();
@@ -40,14 +40,16 @@ public class ServiceView extends View {
         gap();
         print("3. Destroy Service");
         gap();
+        print("9. Save Service");
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toUpdateService(service.getTitle(), null, inputPrice()); });
-        addAction(2, ()->{ Router.toUpdateService(service.getTitle(), inputTitle(), null); });
+        addAction(1, ()->{ Router.toUpdateService(service.getID(), null, inputPrice()); });
+        addAction(2, ()->{ Router.toUpdateService(service.getID(), inputTitle(), null); });
 
-        addAction(3, ()->{ Router.toDestroyService(service.getTitle()); });
+        addAction(3, ()->{ Router.toDestroyService(service.getID()); });
 
+        addAction(9, ()->{ Router.toSaveService(service.getID()); });
         addAction(0, ()->{ Router.toServices(); });
 
         runAction();
@@ -65,4 +67,13 @@ public class ServiceView extends View {
 
     private float inputPrice() { return InputUtils.readFloat("Enter price: "); }
     private String inputTitle() { return InputUtils.readString("Enter title: "); }
+
+    private void printServices(ArrayList<Service> services) { 
+        int index = 4;
+        for ( Service service : services ) {
+            print(String.format("%d. %s", index, service.toString()));
+            addAction(index, ()->{ Router.toShowService(service.getID()); });
+            index++;
+        }
+    }
 }
