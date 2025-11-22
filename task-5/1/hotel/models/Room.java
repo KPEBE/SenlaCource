@@ -4,6 +4,7 @@ import hotel.collections.ClientsCollection;
 import hotel.enums.RoomStatus;
 import hotel.exceptions.room.*;
 import hotel.interfaces.IInspectable;
+import hotel.lib.Config;
 import hotel.services.HotelService;
 import java.time.LocalDate;
 
@@ -39,9 +40,13 @@ public class Room extends Model implements IInspectable {
     public void setNumber(int number) { this.number = number; };
     public void setCapacity(int capacity) { this.capacity = capacity; };
     public void setClient(Client client) { this.client = client; };
-    public void setStatus(RoomStatus newStatus) { this.status = newStatus; };
     public void setStars(int stars) { this.stars = stars; };
     public void setEvictionDate(LocalDate evictionDate) { this.evictionDate = evictionDate; };
+
+    public void setStatus(RoomStatus newStatus) {
+        if (!Config.canChangeRoomStatus()) { throw new ChangeRoomStatusNotAllowedException(); }
+        this.status = newStatus;
+    };
 
     public boolean setPrice(float newPrice) throws UpdateRoomException {
         if (newPrice <= 0) { throw new UpdateRoomException("price must be more then zero"); }

@@ -3,10 +3,16 @@ package hotel.services;
 import hotel.collections.ServicesCollection;
 import hotel.models.Service;
 import hotel.storages.ServicesStorage;
+import java.io.Serializable;
 
-public class ServiceService {
+public class ServiceService implements Serializable {
     private final ServicesCollection services = new ServicesCollection();
-    private final ServicesStorage storage = new ServicesStorage(this);
+    private transient ServicesStorage storage;
+
+    public ServicesStorage getStorage() { 
+        if (storage == null) { storage = new ServicesStorage(this); }
+        return storage;
+    }
 
     public ServicesCollection getServices() { return this.services; }
     public void addService(Service service) { this.services.get().add(service); };
@@ -20,7 +26,7 @@ public class ServiceService {
 
     public Service getService(Integer id) { return services.find(id); }
 
-    public void saveService(Integer id) { this.storage.saveService(getService(id)); };
-    public void saveServices() { this.storage.saveServices(); };
-    public void loadServices() { this.storage.loadServices(); };
+    public void saveService(Integer id) { getStorage().saveService(getService(id)); };
+    public void saveServices() { getStorage().saveServices(); };
+    public void loadServices() { getStorage().loadServices(); };
 }

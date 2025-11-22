@@ -1,9 +1,10 @@
 package hotel.models;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Model {
+public class Model implements Serializable {
   private static final Map<Class<?>, Integer> autoIncrements = new HashMap<>();
   private final Integer id;
   private final Class<?> modelClass = this.getClass();
