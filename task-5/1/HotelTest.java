@@ -1,6 +1,8 @@
 import hotel.collections.*;
 import hotel.enums.*;
+import hotel.lib.Config;
 import hotel.lib.Router;
+import hotel.lib.Serializer;
 import hotel.models.*;
 import hotel.services.*;
 import java.time.LocalDate;
@@ -8,9 +10,11 @@ import java.time.LocalDate;
 public class HotelTest {
     public static void main(String[] args) {
         try {
-            testHotel();
+            Config.loadConfig();
+            // testHotel();
             loadData();
             showUI();
+            Serializer.saveHotel();
         } catch (Exception e) {
             System.err.printf("Catch error on top level: %s\n", e.toString());
             e.printStackTrace();

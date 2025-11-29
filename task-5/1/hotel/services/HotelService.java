@@ -1,11 +1,13 @@
 package hotel.services;
 
+import hotel.lib.Serializer;
 import hotel.models.Hotel;
+import java.io.Serializable;
 
-public class HotelService {
+public class HotelService implements Serializable {
     private static HotelService singleton;
     public static HotelService get() {
-        if (singleton == null) { singleton = new HotelService(); }
+        if (singleton == null) { singleton = Serializer.loadHotel(); }
         return singleton;
     }
 

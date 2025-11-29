@@ -1,6 +1,7 @@
 package hotel.collections;
 
 import hotel.interfaces.IInspectable;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public abstract class BaseCollection<T extends IInspectable, C extends BaseCollection<T, C>> {
+public abstract class BaseCollection<T extends IInspectable, C extends BaseCollection<T, C>> implements Serializable {
     protected final ArrayList<T> elements;
 
     protected Stream<T> getStream() { return this.elements.stream(); }
