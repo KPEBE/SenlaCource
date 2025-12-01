@@ -2,14 +2,23 @@ package hotel.services;
 
 import hotel.collections.RoomsCollection;
 import hotel.enums.RoomStatus;
+import hotel.lib.Config;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.storages.RoomsStorage;
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
-public class RoomService {
+public class RoomService implements Serializable {
     private final RoomsCollection rooms = new RoomsCollection();
-    private final RoomsStorage storage = new RoomsStorage(this);
+    private transient RoomsStorage storage;
+
+    public RoomsStorage getStorage() { 
+        if (storage == null) { storage = new RoomsStorage(this); }
+        return storage;
+    }
+
 
     public RoomsCollection getRooms() { return this.rooms; }
 
@@ -50,7 +59,10 @@ public class RoomService {
         }
 
         room.setClient(null);
-        room.getLastClients().get().add(client);
+        ArrayList<Client> roomLastClients = room.getLastClients().get();
+        roomLastClients.add(client);
+        if (roomLastClients.size() > Config.maxRoomClientsLog()) { roomLastClients.remove(0); }
+
         client.setRoom(null);
         System.out.printf("Client %s is evicted from room %d\n", client.getFullname(), room.getNumber());
     };
@@ -73,7 +85,7 @@ public class RoomService {
         System.out.printf("Client %s is populated to room %d\n", client.getFullname(), room.getNumber());
     };
 
-    public void saveRoom(Integer id) { this.storage.saveRoom(getRoom(id)); };
-    public void saveRooms() { this.storage.saveRooms(); };
-    public void loadRooms() { this.storage.loadRooms(); };
+    public void saveRoom(Integer id) { getStorage().saveRoom(getRoom(id)); };
+    public void saveRooms() { getStorage().saveRooms(); };
+    public void loadRooms() { getStorage().loadRooms(); };
 }
