@@ -1,6 +1,7 @@
 package hotel.controllers;
 
 import hotel.enums.RoomStatus;
+import hotel.lib.AutoDI;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.services.HotelService;
@@ -10,8 +11,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class RoomController {
-    private final RoomView view = new RoomView();
-    private final RoomService service = HotelService.get().getRoomService();
+    @AutoDI
+    private RoomView view;
+
+    @AutoDI
+    private RoomService service;
 
     public void index() {
         ArrayList<Room> rooms = service.getRooms().get();

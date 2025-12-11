@@ -1,20 +1,20 @@
 package hotel.services;
 
 import hotel.collections.ClientsCollection;
+import hotel.lib.AutoDI;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.storages.ClientsStorage;
 import java.io.Serializable;
 
 public class ClientService implements Serializable {
-    private final ClientsCollection clients = new ClientsCollection();
+    @AutoDI
+    private ClientsCollection clients;
+
+    @AutoDI
     private transient ClientsStorage storage;
 
-    public ClientsStorage getStorage() { 
-        if (storage == null) { storage = new ClientsStorage(this); }
-        return storage;
-    }
-
+    public ClientsStorage getStorage() { return this.storage; }
     public ClientsCollection getClients() { return this.clients; };
     public void addClient(Client client) { this.clients.get().add(client); };
 

@@ -1,6 +1,7 @@
 package hotel.storages;
 
 import hotel.enums.RoomStatus;
+import hotel.lib.AutoDI;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.services.HotelService;
@@ -10,9 +11,8 @@ import java.time.LocalDate;
 public class RoomsStorage extends Storage {
   private final String ROOM_DATA_PATH = String.format("%s/%s.csv", DATA_DIR, "rooms");
 
-  private final RoomService roomService;
-
-  public RoomsStorage(RoomService roomService) { this.roomService = roomService; }
+  @AutoDI
+  private RoomService roomService;
 
   public void loadRooms() { loadFromCSV(ROOM_DATA_PATH, p->loadRoom(p)); }
   public void saveRooms() { recreateFile(ROOM_DATA_PATH); roomService.getRooms().each(r->saveToCSV(ROOM_DATA_PATH, roomParams(r)));  }

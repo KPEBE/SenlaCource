@@ -5,39 +5,52 @@ import hotel.enums.RoomStatus;
 import hotel.enums.ServiceType;
 
 public class Router {
-    private final static HotelController hotelController = new HotelController();
-    private final static ClientController clientController = new ClientController();
-    private final static RoomController roomController = new RoomController();
-    private final static ServiceController serviceController = new ServiceController();
+    private static Router router;
+    public static Router get() {
+        if (router == null) { router = new Router(); }
+        return router;
+    }
 
-    public static void toHotels() { hotelController.show(); }
+    @AutoDI
+    private HotelController hotelController;
 
-    public static void toRooms() { roomController.index(); }
-    public static void toCreateRoom(int number, int capacity, int stars, float price) { roomController.create(number, capacity, stars, price); }
-    public static void toShowRoom(int id) { roomController.show(id); }
-    public static void toUpdateRoom(int id, RoomStatus status, Integer stars, Float price) { roomController.update(id, status, stars, price); }
-    public static void toDestroyRoom(int id) { roomController.destroy(id); }
-    public static void toEvictClient(int id) { roomController.evict(id); }
-    public static void toPopulateClient(int id, int clientId) { roomController.populate(id, clientId); }
-    public static void toSaveRoom(int id) { roomController.saveRoom(id); }
-    public static void toSaveRooms() { roomController.saveRooms(); }
-    public static void toLoadRooms() { roomController.loadRooms(); }
+    @AutoDI
+    private ClientController clientController;
 
-    public static void toServices() { serviceController.index(); }
-    public static void toCreateService(String title, ServiceType type, float price) { serviceController.create(title, type, price); }
-    public static void toShowService(int id) { serviceController.show(id); }
-    public static void toUpdateService(int id, String newTitle, Float price) { serviceController.update(id, newTitle, price); }
-    public static void toDestroyService(int id) { serviceController.destroy(id); }
-    public static void toSaveService(int id) { serviceController.saveService(id); }
-    public static void toSaveServices() { serviceController.saveServices(); }
-    public static void toLoadServices() { serviceController.loadServices(); }
+    @AutoDI
+    private RoomController roomController;
 
-    public static void toClients() { clientController.index(); }
-    public static void toCreateClient(String name) { clientController.create(name); }
-    public static void toShowClient(int id) { clientController.show(id); }
-    public static void toUpdateClient(int id, String newName) { clientController.update(id, newName); }
-    public static void toDestroyClient(int id) { clientController.destroy(id); }
-    public static void toSaveClient(int id) { clientController.saveClient(id); }
-    public static void toSaveClients() { clientController.saveClients(); }
-    public static void toLoadClients() { clientController.loadClients(); }
+    @AutoDI
+    private ServiceController serviceController;
+
+    public void toHotels() { hotelController.show(); }
+
+    public void toRooms() { roomController.index(); }
+    public void toCreateRoom(int number, int capacity, int stars, float price) { roomController.create(number, capacity, stars, price); }
+    public void toShowRoom(int id) { roomController.show(id); }
+    public void toUpdateRoom(int id, RoomStatus status, Integer stars, Float price) { roomController.update(id, status, stars, price); }
+    public void toDestroyRoom(int id) { roomController.destroy(id); }
+    public void toEvictClient(int id) { roomController.evict(id); }
+    public void toPopulateClient(int id, int clientId) { roomController.populate(id, clientId); }
+    public void toSaveRoom(int id) { roomController.saveRoom(id); }
+    public void toSaveRooms() { roomController.saveRooms(); }
+    public void toLoadRooms() { roomController.loadRooms(); }
+
+    public void toServices() { serviceController.index(); }
+    public void toCreateService(String title, ServiceType type, float price) { serviceController.create(title, type, price); }
+    public void toShowService(int id) { serviceController.show(id); }
+    public void toUpdateService(int id, String newTitle, Float price) { serviceController.update(id, newTitle, price); }
+    public void toDestroyService(int id) { serviceController.destroy(id); }
+    public void toSaveService(int id) { serviceController.saveService(id); }
+    public void toSaveServices() { serviceController.saveServices(); }
+    public void toLoadServices() { serviceController.loadServices(); }
+
+    public void toClients() { clientController.index(); }
+    public void toCreateClient(String name) { clientController.create(name); }
+    public void toShowClient(int id) { clientController.show(id); }
+    public void toUpdateClient(int id, String newName) { clientController.update(id, newName); }
+    public void toDestroyClient(int id) { clientController.destroy(id); }
+    public void toSaveClient(int id) { clientController.saveClient(id); }
+    public void toSaveClients() { clientController.saveClients(); }
+    public void toLoadClients() { clientController.loadClients(); }
 }
