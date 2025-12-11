@@ -1,5 +1,6 @@
 package hotel.storages;
 
+import hotel.config.AutoDI;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.services.ClientService;
@@ -8,9 +9,8 @@ import hotel.services.HotelService;
 public class ClientsStorage extends Storage {
   private final String CLIENT_DATA_PATH = String.format("%s/%s.csv", DATA_DIR, "clients");
 
-  private final ClientService clientService;
-
-  public ClientsStorage(ClientService clientService) { this.clientService = clientService; }
+  @AutoDI
+  private ClientService clientService;
 
   public void loadClients() { loadFromCSV(CLIENT_DATA_PATH, p->loadClient(p)); }
   public void saveClients() { recreateFile(CLIENT_DATA_PATH); clientService.getClients().each(r->saveToCSV(CLIENT_DATA_PATH, clientParams(r)));  }
@@ -25,7 +25,7 @@ public class ClientsStorage extends Storage {
     Room room = null;
     if (params[2] != "") {
       Integer roomId = Integer.parseInt(params[2]);
-      room = HotelService.get().getRoomService().getRoom(roomId);
+      room = HotelService.get().hotel.roomService.getRoom(roomId);
     }
 
     Client client = clientService.getClient(id);

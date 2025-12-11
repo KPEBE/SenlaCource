@@ -1,19 +1,19 @@
 package hotel.services;
 
 import hotel.collections.ServicesCollection;
+import hotel.config.AutoDI;
 import hotel.models.Service;
 import hotel.storages.ServicesStorage;
 import java.io.Serializable;
 
 public class ServiceService implements Serializable {
-    private final ServicesCollection services = new ServicesCollection();
+    @AutoDI
+    private ServicesCollection services;
+
+    @AutoDI
     private transient ServicesStorage storage;
 
-    public ServicesStorage getStorage() { 
-        if (storage == null) { storage = new ServicesStorage(this); }
-        return storage;
-    }
-
+    public ServicesStorage getStorage() { return this.storage; }
     public ServicesCollection getServices() { return this.services; }
     public void addService(Service service) { this.services.get().add(service); };
 

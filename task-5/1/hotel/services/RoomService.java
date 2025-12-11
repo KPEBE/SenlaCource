@@ -1,8 +1,9 @@
 package hotel.services;
 
 import hotel.collections.RoomsCollection;
+import hotel.config.AutoDI;
+import hotel.config.Config;
 import hotel.enums.RoomStatus;
-import hotel.lib.Config;
 import hotel.models.Client;
 import hotel.models.Room;
 import hotel.storages.RoomsStorage;
@@ -11,15 +12,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class RoomService implements Serializable {
-    private final RoomsCollection rooms = new RoomsCollection();
+    @AutoDI
+    private RoomsCollection rooms;
+
+    @AutoDI
     private transient RoomsStorage storage;
 
-    public RoomsStorage getStorage() { 
-        if (storage == null) { storage = new RoomsStorage(this); }
-        return storage;
-    }
-
-
+    public RoomsStorage getStorage() { return this.storage; }
     public RoomsCollection getRooms() { return this.rooms; }
 
     public Room getRoom(Integer id) { return rooms.find(id); }

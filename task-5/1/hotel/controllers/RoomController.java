@@ -1,5 +1,6 @@
 package hotel.controllers;
 
+import hotel.config.AutoDI;
 import hotel.enums.RoomStatus;
 import hotel.models.Client;
 import hotel.models.Room;
@@ -10,8 +11,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class RoomController {
-    private final RoomView view = new RoomView();
-    private final RoomService service = HotelService.get().getRoomService();
+    @AutoDI
+    private RoomView view;
+
+    @AutoDI
+    private RoomService service;
 
     public void index() {
         ArrayList<Room> rooms = service.getRooms().get();
@@ -51,7 +55,7 @@ public class RoomController {
 
     public void populate(int id, int clientId) {
         LocalDate evictionDate = LocalDate.now().plusWeeks(1);
-        Client client = HotelService.get().getClientService().getClient(clientId);
+        Client client = HotelService.get().hotel.clientService.getClient(clientId);
         Room room = service.getRoom(id);
         service.populateTo(id, client, evictionDate);
         view.show(room);

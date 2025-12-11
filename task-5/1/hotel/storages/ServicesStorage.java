@@ -1,5 +1,6 @@
 package hotel.storages;
 
+import hotel.config.AutoDI;
 import hotel.enums.ServiceType;
 import hotel.models.Service;
 import hotel.services.ServiceService;
@@ -7,9 +8,8 @@ import hotel.services.ServiceService;
 public class ServicesStorage extends Storage {
   private final String SERVICE_DATA_PATH = String.format("%s/%s.csv", DATA_DIR, "services");
 
-  private final ServiceService serviceService;
-
-  public ServicesStorage(ServiceService serviceService) { this.serviceService = serviceService; }
+  @AutoDI
+  private ServiceService serviceService;
 
   public void loadServices() { loadFromCSV(SERVICE_DATA_PATH, p->loadService(p)); }
   public void saveServices() { recreateFile(SERVICE_DATA_PATH); serviceService.getServices().each(r->saveToCSV(SERVICE_DATA_PATH, serviceParams(r)));  }

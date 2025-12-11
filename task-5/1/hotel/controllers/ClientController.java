@@ -1,15 +1,18 @@
 package hotel.controllers;
 
+import hotel.config.AutoDI;
 import hotel.models.Client;
 import hotel.services.ClientService;
-import hotel.services.HotelService;
 import hotel.views.ClientView;
 import java.util.ArrayList;
 
 public class ClientController {
 
-    private final ClientView view = new ClientView();
-    private final ClientService service = HotelService.get().getClientService();
+    @AutoDI
+    private ClientView view;
+
+    @AutoDI
+    private ClientService service;
 
     public void index() {
         ArrayList<Client> clients = service.getClients().get();

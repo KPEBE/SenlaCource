@@ -1,8 +1,8 @@
 package hotel.views;
 
+import hotel.config.InputUtils;
+import hotel.config.Router;
 import hotel.enums.RoomStatus;
-import hotel.lib.InputUtils;
-import hotel.lib.Router;
 import hotel.models.Room;
 import java.util.ArrayList;
 
@@ -22,10 +22,10 @@ public class RoomView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toCreateRoom(inputNumber(), inputCapacity(), inputStars(), inputPrice()); });
-        addAction(2, ()->{ Router.toSaveRooms(); });
-        addAction(3, ()->{ Router.toLoadRooms(); });
-        addAction(0, ()->{ Router.toHotels(); });
+        addAction(1, ()->{ Router.get().toCreateRoom(inputNumber(), inputCapacity(), inputStars(), inputPrice()); });
+        addAction(2, ()->{ Router.get().toSaveRooms(); });
+        addAction(3, ()->{ Router.get().toLoadRooms(); });
+        addAction(0, ()->{ Router.get().toHotels(); });
 
         runAction();
     }
@@ -52,17 +52,17 @@ public class RoomView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toUpdateRoom(room.getID(), RoomStatus.REPAIRING, null, null); });
-        addAction(2, ()->{ Router.toUpdateRoom(room.getID(), RoomStatus.SERVICING, null, null); });
-        addAction(3, ()->{ Router.toUpdateRoom(room.getID(), null, null, null); });
-        addAction(4, ()->{ Router.toUpdateRoom(room.getID(), room.getStatus(), null, inputPrice()); });
-        addAction(5, ()->{ Router.toUpdateRoom(room.getID(), room.getStatus(), inputStars(), null); });
-        addAction(6, ()->{ Router.toEvictClient(room.getID()); });
-        addAction(7, ()->{ Router.toPopulateClient(room.getID(), inputClientId()); });
+        addAction(1, ()->{ Router.get().toUpdateRoom(room.getID(), RoomStatus.REPAIRING, null, null); });
+        addAction(2, ()->{ Router.get().toUpdateRoom(room.getID(), RoomStatus.SERVICING, null, null); });
+        addAction(3, ()->{ Router.get().toUpdateRoom(room.getID(), null, null, null); });
+        addAction(4, ()->{ Router.get().toUpdateRoom(room.getID(), room.getStatus(), null, inputPrice()); });
+        addAction(5, ()->{ Router.get().toUpdateRoom(room.getID(), room.getStatus(), inputStars(), null); });
+        addAction(6, ()->{ Router.get().toEvictClient(room.getID()); });
+        addAction(7, ()->{ Router.get().toPopulateClient(room.getID(), inputClientId()); });
 
-        addAction(9, ()->{ Router.toDestroyRoom(room.getID()); });
-        addAction(10, ()->{ Router.toSaveRoom(room.getID()); });
-        addAction(0, ()->{ Router.toRooms(); });
+        addAction(9, ()->{ Router.get().toDestroyRoom(room.getID()); });
+        addAction(10, ()->{ Router.get().toSaveRoom(room.getID()); });
+        addAction(0, ()->{ Router.get().toRooms(); });
 
         runAction();
     }
@@ -78,7 +78,7 @@ public class RoomView extends View {
         int index = 4;
         for ( Room room : rooms ) {
             print(String.format("%d. %s", index, room.toString()));
-            addAction(index, ()->{ Router.toShowRoom(room.getID()); });
+            addAction(index, ()->{ Router.get().toShowRoom(room.getID()); });
             index++;
         }
     }

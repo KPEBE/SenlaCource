@@ -1,6 +1,6 @@
 package hotel.views;
 
-import hotel.lib.InputUtils;
+import hotel.config.InputUtils;
 import java.util.HashMap;
 
 public class View {

@@ -13,7 +13,7 @@ public class Service extends Model implements IInspectable {
     public Service(Integer id) { super(id); }
     public Service(String title, ServiceType type) { 
         super(null);
-        if (HotelService.get().getServiceService().getServices().findByTitle(title) != null) { throw new CreateServiceException("duplicate service title"); }
+        if (HotelService.get().hotel.serviceService.getServices().findByTitle(title) != null) { throw new CreateServiceException("duplicate service title"); }
 
         this.title = title;
         this.type = type;
