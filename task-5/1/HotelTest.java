@@ -1,6 +1,9 @@
 import hotel.collections.*;
 import hotel.enums.*;
+import hotel.lib.AutoConfig;
+import hotel.lib.AutoDILoader;
 import hotel.lib.Config;
+import hotel.lib.ConfigLoader;
 import hotel.lib.Router;
 import hotel.lib.Serializer;
 import hotel.models.*;
@@ -11,6 +14,7 @@ public class HotelTest {
     public static void main(String[] args) {
         try {
             Config.loadConfig();
+            ConfigLoader.LoadConfig(AutoConfig.GetConfig());
             // testHotel();
             loadData();
             showUI();
@@ -103,7 +107,9 @@ public class HotelTest {
     private static void showUI() {
         while (true) {
             try {
-                Router.toHotels();
+                Router router = Router.get();
+                AutoDILoader.Load(router);
+                router.toHotels();
                 break;
             }
             catch (StackOverflowError e) {

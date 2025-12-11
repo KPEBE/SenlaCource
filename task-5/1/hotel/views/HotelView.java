@@ -15,9 +15,9 @@ public class HotelView extends View {
         print("0. Exit");
         gap();
 
-        addAction(1, ()->{ Router.toRooms(); });
-        addAction(2, ()->{ Router.toServices(); });
-        addAction(3, ()->{ Router.toClients(); });
+        addAction(1, ()->{ Router.get().toRooms(); });
+        addAction(2, ()->{ Router.get().toServices(); });
+        addAction(3, ()->{ Router.get().toClients(); });
 
         runAction();
     }
