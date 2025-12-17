@@ -1,10 +1,10 @@
 package hotel.models;
 
 import hotel.collections.ClientsCollection;
+import hotel.config.Config;
 import hotel.enums.RoomStatus;
 import hotel.exceptions.room.*;
 import hotel.interfaces.IInspectable;
-import hotel.lib.Config;
 import hotel.services.HotelService;
 import java.time.LocalDate;
 
@@ -21,7 +21,7 @@ public class Room extends Model implements IInspectable {
     public Room(Integer id) { super(id); }
     public Room(int number, int capacity, int stars) throws CreateRoomException { 
         super(null);
-        if (HotelService.get().getRoomService().getRooms().findByNumber(number) != null) { throw new CreateRoomException("duplicate room number"); }
+        if (HotelService.get().hotel.roomService.getRooms().findByNumber(number) != null) { throw new CreateRoomException("duplicate room number"); }
 
         this.number = number;
         this.capacity = capacity;

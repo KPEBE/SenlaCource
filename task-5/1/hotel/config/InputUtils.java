@@ -1,4 +1,4 @@
-package hotel.lib;
+package hotel.config;
 
 import java.util.Scanner;
 

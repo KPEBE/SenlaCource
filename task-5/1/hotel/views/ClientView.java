@@ -1,7 +1,7 @@
 package hotel.views;
 
-import hotel.lib.InputUtils;
-import hotel.lib.Router;
+import hotel.config.InputUtils;
+import hotel.config.Router;
 import hotel.models.Client;
 import java.util.ArrayList;
 
@@ -21,10 +21,10 @@ public class ClientView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toCreateClient(inputClientName()); });
-        addAction(2, ()->{ Router.toSaveClients(); });
-        addAction(3, ()->{ Router.toLoadClients(); });
-        addAction(0, ()->{ Router.toHotels(); });
+        addAction(1, ()->{ Router.get().toCreateClient(inputClientName()); });
+        addAction(2, ()->{ Router.get().toSaveClients(); });
+        addAction(3, ()->{ Router.get().toLoadClients(); });
+        addAction(0, ()->{ Router.get().toHotels(); });
 
         runAction();
     }
@@ -40,9 +40,9 @@ public class ClientView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toDestroyClient(client.getID()); });
-        addAction(9, ()->{ Router.toSaveClient(client.getID()); });
-        addAction(0, ()->{ Router.toClients(); });
+        addAction(1, ()->{ Router.get().toDestroyClient(client.getID()); });
+        addAction(9, ()->{ Router.get().toSaveClient(client.getID()); });
+        addAction(0, ()->{ Router.get().toClients(); });
 
         runAction();
     }
@@ -53,7 +53,7 @@ public class ClientView extends View {
         int index = 4;
         for ( Client client : clients ) {
             print(String.format("%d. %s", index, client.toString()));
-            addAction(index, ()->{ Router.toShowClient(client.getID()); });
+            addAction(index, ()->{ Router.get().toShowClient(client.getID()); });
             index++;
         }
     }

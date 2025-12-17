@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class Storage {
-  protected final String DATA_DIR = "./data";
+  protected final String DATA_DIR = "./resources";
   
   protected void loadFromCSV(String filePath, Consumer<String[]> loader) {
     try(BufferedReader reader = new BufferedReader(new FileReader(filePath)))

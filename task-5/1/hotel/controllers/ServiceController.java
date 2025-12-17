@@ -1,16 +1,19 @@
 package hotel.controllers;
 
+import hotel.config.AutoDI;
 import hotel.enums.ServiceType;
 import hotel.models.Service;
-import hotel.services.HotelService;
 import hotel.services.ServiceService;
 import hotel.views.ServiceView;
 import java.util.ArrayList;
 
 public class ServiceController {
 
-    private final ServiceView view = new ServiceView();
-    private final ServiceService service = HotelService.get().getServiceService();
+    @AutoDI
+    private ServiceView view;
+
+    @AutoDI
+    private ServiceService service;
 
     public void index() {
         ArrayList<Service> services = service.getServices().get();

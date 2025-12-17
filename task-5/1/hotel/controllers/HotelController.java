@@ -1,9 +1,11 @@
 package hotel.controllers;
 
+import hotel.config.AutoDI;
 import hotel.views.HotelView;
 
 public class HotelController {
-    private final HotelView view = new HotelView();
+    @AutoDI
+    private HotelView view;
 
     public void show() { view.show(); }
 }

@@ -1,8 +1,8 @@
 package hotel.views;
 
+import hotel.config.InputUtils;
+import hotel.config.Router;
 import hotel.enums.ServiceType;
-import hotel.lib.InputUtils;
-import hotel.lib.Router;
 import hotel.models.Service;
 import java.util.ArrayList;
 
@@ -22,10 +22,10 @@ public class ServiceView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toCreateService(inputTitle(), inpuServiceType(), inputPrice()); });
-        addAction(2, ()->{ Router.toSaveServices(); });
-        addAction(3, ()->{ Router.toLoadServices(); });
-        addAction(0, ()->{ Router.toHotels(); });
+        addAction(1, ()->{ Router.get().toCreateService(inputTitle(), inpuServiceType(), inputPrice()); });
+        addAction(2, ()->{ Router.get().toSaveServices(); });
+        addAction(3, ()->{ Router.get().toLoadServices(); });
+        addAction(0, ()->{ Router.get().toHotels(); });
 
         runAction();
     }
@@ -44,13 +44,13 @@ public class ServiceView extends View {
         print("0. Back");
         gap();
 
-        addAction(1, ()->{ Router.toUpdateService(service.getID(), null, inputPrice()); });
-        addAction(2, ()->{ Router.toUpdateService(service.getID(), inputTitle(), null); });
+        addAction(1, ()->{ Router.get().toUpdateService(service.getID(), null, inputPrice()); });
+        addAction(2, ()->{ Router.get().toUpdateService(service.getID(), inputTitle(), null); });
 
-        addAction(3, ()->{ Router.toDestroyService(service.getID()); });
+        addAction(3, ()->{ Router.get().toDestroyService(service.getID()); });
 
-        addAction(9, ()->{ Router.toSaveService(service.getID()); });
-        addAction(0, ()->{ Router.toServices(); });
+        addAction(9, ()->{ Router.get().toSaveService(service.getID()); });
+        addAction(0, ()->{ Router.get().toServices(); });
 
         runAction();
     }
@@ -72,7 +72,7 @@ public class ServiceView extends View {
         int index = 4;
         for ( Service service : services ) {
             print(String.format("%d. %s", index, service.toString()));
-            addAction(index, ()->{ Router.toShowService(service.getID()); });
+            addAction(index, ()->{ Router.get().toShowService(service.getID()); });
             index++;
         }
     }

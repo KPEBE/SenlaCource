@@ -11,7 +11,7 @@ public class Client extends Model implements IInspectable {
     public Client(Integer id) { super(id); };
     public Client(String fullname) { 
         super(null);
-        if (HotelService.get().getClientService().getClients().findByFullname(fullname) != null) { throw new CreateClientException("duplicate client name"); }
+        if (HotelService.get().hotel.clientService.getClients().findByFullname(fullname) != null) { throw new CreateClientException("duplicate client name"); }
 
         this.fullname = fullname;
     };
